@@ -12,9 +12,9 @@ const NotFound = () => <h1>404 - Page Not Found</h1>;
 
 const RoutesList = () => (
   <ul>
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/about">About</Link></li>
-    <li><Link to="/profile">Profile</Link></li>
+    <li><Link to="/en">Home</Link></li>
+    <li><Link to="/en/about">About</Link></li>
+    <li><Link to="/en/profile">Profile</Link></li>
   </ul>
 );
 
@@ -31,10 +31,11 @@ const App = () => {
 
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/profile/:id/edit" element={<EditProfile />} />
-                    <Route path="/profile/:id/:name/edit" element={<EditProfile />} />
+                    <Route path="/en" element={<Home />} />
+                    <Route path="/en/about" element={<About />} />
+                    <Route path="/en/profile" element={<Profile />} />
+                    <Route path="/en/profile/:id/edit" element={<EditProfile />} />
+                    <Route path="/en/profile/:id/:name/edit" element={<EditProfile />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
 
