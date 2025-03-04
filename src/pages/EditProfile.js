@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 export const EditProfile = () => {
     const { id, name } = useParams()
 
-  useEffect(() => setCookie('editProfile__' + id, 'true', 3), []);
+  useEffect(() => setCookie('editProfile__' + id, 'true', 3), [id]);
   useScrollToBottom(() => setCookie('scrolledToBottomOnEditProfile__' + id, 'true', 3));
 
 
