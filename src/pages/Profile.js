@@ -31,8 +31,8 @@ export const Profile = () => {
                 { id && <p><strong>ID:</strong> {id}</p>}
 
                 <div className='d-flex'>
-                  <Link to={`/profile/${id}/${name}/edit`}>Edit</Link>
-                  <Link to={`/profile/${id}/${name}/delete`} style={{ marginLeft: '10px' }}>Delete</Link>
+                  <Link to={`/en/profile/${id}/${name}/edit`}>Edit</Link>
+                  <Link to={`/en/profile/${id}/${name}/delete`} style={{ marginLeft: '10px' }}>Delete</Link>
                 </div>
               </div>
             ))}
