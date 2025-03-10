@@ -24,8 +24,8 @@ const RoutesList = () => (
     <li><Link to="/en">Home</Link></li>
     <li><Link to="/en/about">About</Link></li>
     <li><Link to="/en/profile">Profile</Link></li>
-    
-    {Sections.map(section => (<li><Link to={'#' + section.id} /></li>))}
+
+    {Sections.map(section => (<li><Link to={'#' + section.id + '-section'} >{ section.name }</Link></li>))}
   </ul>
 );
 
@@ -52,7 +52,7 @@ const App = () => {
 
                 {
                     Sections.map(section => (
-                        <div key={section.id} id={section.id + '__section'} style={{ height: '30vh', padding: '20px', backgroundColor: section.id%2 === 0 ? '#fff' : '#f1f7f8' }}>
+                        <div key={section.id} id={section.id + '-section'} style={{ height: '30vh', padding: '20px', backgroundColor: section.id%2 === 0 ? '#fff' : '#f1f7f8' }}>
                             <h2>{section.name}</h2>
                             <p>Scroll to the bottom of the page or click the button to drop a cookie!</p>
                         </div>
